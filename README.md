@@ -24,24 +24,24 @@ Each task should have the following properties:
 ## Example
 ```sh
 # Adding a new task
-php task.php add "Buy groceries"
+php tasks.php add "Buy groceries"
 # Output: Task added successfully (ID:1).
 
 # Updating and deleting tasks
-php task.php update 1 "Buy groceries and cook dinner"
-php task.php delete 1
+php tasks.php update 1 "Buy groceries and cook dinner"
+php tasks.php delete 1
 
 # Marking a task as in progress or done
-php task.php mark-in-progress 1
-php task.php mark-done 1
+php tasks.php mark-in-progress 1
+php tasks.php mark-done 1
 
 # Listing all tasks
-php task.php list
+php tasks.php list
 
 # Listing tasks by status
-php task.php list done
-php task.php list todo
-php task.php list in-progress
+php tasks.php list done
+php tasks.php list todo
+php tasks.php list in-progress
 ```
 ## Requirements
 
