@@ -1,14 +1,31 @@
-# Task Traker CLI with PHP
+# Task Tracker CLI with PHP
 
 Backend Projects, run a ToDo using CLI [Link](https://roadmap.sh/projects/task-tracker)
 
 Task Tracker CLI is a command-line application that allows you to easily manage tasks. You can add, update, list, and delete tasks directly from the console.
 
+## Task Properties
+Each task should have the following properties:
+- `id`: A unique identifier for the task
+- `description`: A short description of the task
+- `status`: The status of the task (todo, in-progress, done)
+- `createdAt`: The date and time when the task was created
+- `updatedAt`: The date and time when the task was last updated
+
+## Commands
+- `add` `[description]`: Adds a new task with the specified description.
+- `update` `[index]` `[description]`: Updates the description of the task at the specified index.
+- `mark-in-progress` `[index]`: Marks the task at the specified index as "in-progress".
+- `mark-done` `[index]`: Marks the task at the specified index as "done".
+- `list` `[filter]`: Lists all tasks or filters by status (`todo`, `in-progress`, `done`).
+- `delete` `[index]`: Deletes the task at the specified index.
+
+
 ## Example
-```bash
+```sh
 # Adding a new task
 php task.php add "Buy groceries"
-# Output: Task added successfully
+# Output: Task added successfully (ID:1).
 
 # Updating and deleting tasks
 php task.php update 1 "Buy groceries and cook dinner"
@@ -46,9 +63,6 @@ php task.php list in-progress
 
 3. Make sure you have PHP installed and configured in your PATH.
 
-## Uso
-
-Para ejecutar la aplicación, abre tu terminal y navega al directorio del proyecto. Luego, ejecuta el siguiente comando:
-
-```sh
-php [tasks.php](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5Claragon%5C%5Cwww%5C%5Croadmap_practice%5C%5Cbackend%5C%5Ctask-traker-CLI%5C%5Ctasks.php%22%2C%22_sep%22%3A1%2C%22path%22%3A%22%2Fc%3A%2Flaragon%2Fwww%2Froadmap_practice%2Fbackend%2Ftask-traker-CLI%2Ftasks.php%22%2C%22scheme%22%3A%22file%22%7D%7D) [comando] [argumentos]
+## Explanation
+- JSON file: A `tasks.json` file is used to store tasks persistently.
+- Errors and edge cases: The script handles missing arguments or invalid indexes to avoid unhandled errors.
